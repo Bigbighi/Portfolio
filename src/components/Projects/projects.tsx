@@ -27,10 +27,13 @@ export default function projects () {
 
     const mostraProjetos = () => {
         const divProjetos = document.getElementById('projetos');
-        divProjetos.innerHTML = '';
+        if(divProjetos){
+            divProjetos.innerHTML = "";
+        }
 
         projects.map((pecorrer) => {
-            divProjetos.innerHTML += `
+            if(divProjetos){
+                divProjetos.innerHTML += `
                 <div class='${style.Sombra} ${style.cor} p-5'>
                     <h1 class="text-center text-2xl mb-2">${pecorrer?.nomeProjeto}</h1>
                     <img src=${pecorrer?.img} class='mx-auto' alt="Spotify" width='350'/>
@@ -50,6 +53,7 @@ export default function projects () {
                     </div>
                 </div>
             `
+            }
         })
     }
 
