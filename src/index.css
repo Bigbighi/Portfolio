@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body, HTMl, #root{
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(100deg, #4C4A59, #0c4f4b, #F2CDAC,  #4C4A59);
+    background-size: 500% 200%;
+    animation: backgroundtransition 8s infinite alternate;
+    scroll-behavior: smooth;
+}
+
+@keyframes backgroundtransition {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+main{
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+}
+
+
+
